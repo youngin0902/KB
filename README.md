@@ -34,8 +34,8 @@ AI 기반 저탄소 소비 실천 금융 서비스 **그린에이전트**
    ```
 KB/
 ├── dataset/                              # 데이터셋 폴더
-│   ├── final_member.csv                  # 최종 정제 데이터
-│   ├── member.csv                        # 원본 회원·거래 데이터
+│   ├── final_member.csv                  # 탄소 배출량 매핑 최종 거래 데이터
+│   ├── member.csv                        # 더미 원본 회원·거래 데이터
 │   ├── member_with_category.csv          # 업종(category) 매핑 데이터
 │   └── member_with_category_mcc.csv      # MCC 코드 포함 업종 매핑 데이터
 │
