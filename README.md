@@ -1,13 +1,14 @@
-# 녹색금융연구소
+# KB 국민은행 FUTURE FINANCE A.I. CHALLENGE  
+**팀명:** 녹색금융연구소  
+**팀원:** 김동희, 이승준, 최영인  
 
-AI 기반 저탄소 소비 실천 금융 서비스 **"그린에이전트"**  
-개인의 소비 데이터를 분석하여 탄소 배출량을 산출하고, 맞춤형 감축 전략과 ESG 금융 서비스 연계를 제공하는 서비스입니다.
+AI 기반 저탄소 소비 실천 금융 서비스 **그린에이전트**
 
 ---
 
 ## 📌 프로젝트 개요
 본 프로젝트는 금융 소비 데이터를 활용해 사용자의 탄소발자국을 정량적으로 측정하고, AI를 통해 친환경 소비 행동을 유도하는 서비스입니다.  
-카드 거래 내역을 업종(MCC)으로 분류하고 탄소 배출량을 계산한 뒤, LLM 기반 피드백과 시각화를 통해 사용자의 행동 변화를 지원합니다.
+카드 거래 내역을 업종(MCC)으로 분류하고 탄소 배출량을 계산한 뒤, LLM 기반 피드백을 통해 사용자의 행동 변화를 지원합니다.
 
 ---
 
@@ -24,19 +25,27 @@ AI 기반 저탄소 소비 실천 금융 서비스 **"그린에이전트"**
    - LLM(Gemini 2.5 Pro) 기반 친환경 소비 행동 추천
 
 ---
-
+## 🛠 기술 스택
+- **Language**: Python 3.12
+- **API**: Mastercard Carbon Calculator, Kakao Map API, Google Gemini
+- **Libraries**: pandas, matplotlib, PyPDF2, python-dotenv
+---
 ## 📂 디렉토리 구조 
    ```
 KB/
-├── dataset/
-│ ├── final_member.csv # 최종 데이터
-│ ├── member.csv # 원본 회원·거래 데이터
-│ ├── member_with_category.csv # 업종(category) 매핑 데이터
-│ └── member_with_category_mcc.csv # MCC 코드 포함 업종 매핑 데이터
-├── main.ipynb # 분석·시각화 메인 노트북
-├── README.md
-├── requirements.txt
-└── .env # API Key 등 환경 변수
+├── dataset/                              # 데이터셋 폴더
+│   ├── final_member.csv                  # 최종 정제 데이터
+│   ├── member.csv                        # 원본 회원·거래 데이터
+│   ├── member_with_category.csv          # 업종(category) 매핑 데이터
+│   └── member_with_category_mcc.csv      # MCC 코드 포함 업종 매핑 데이터
+│
+├── pdf/                                  # 금융상품 PDF 자료
+│   └── product(n).pdf                    # 예: product1.pdf, product2.pdf ...
+├── main.ipynb                            # 분석·시각화 메인 Jupyter 노트북
+├── README.md                             # 프로젝트 설명 문서
+├── requirements.txt                      # Python 패키지 의존성 목록
+└── .env                                  # 환경 변수
+
    ```
 ## 🚀 Quickstart
 
@@ -57,3 +66,6 @@ KB/
    KAKAO_API_KEY=YOUR_KAKAO_API_KEY
    ```
 4. **프로젝트 실행**
+   ```
+   jupyter notebook main.ipynb
+   ```
